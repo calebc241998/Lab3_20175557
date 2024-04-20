@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/navbar_inicio"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_1"
+        android:layout_width="392dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="DuplicateIds,MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="143dp"
+            android:layout_height="76dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:text="Contador Número primos: Podrá visualizar los primeros 999 números primos"
+            android:textAlignment="center"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/buttonVisualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:layout_toRightOf="@id/textView1"
+            android:backgroundTint="#4CAF50"
+            android:text="Visualizar"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_2"
+        android:layout_width="392dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/bienvenido_buscador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="92dp"
+            android:layout_marginBottom="16dp"
+            android:text="Bienvenido al Buscador de películas"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="274dp"
+            android:layout_height="128dp"
+            android:layout_below="@+id/bienvenido_buscador"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/padrino" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="401dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="5dp"
+        android:background="#F3EEEE"
+        android:backgroundTint="#BFB0B0"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout_2"
+        tools:ignore="MissingConstraints">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="401dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="300dp"
+        android:background="#D3CCCC"
+        android:backgroundTint="#191717"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_3"
+        android:layout_width="392dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        tools:ignore="DuplicateIds,MissingConstraints">
+
+        <EditText
+            android:id="@+id/idPelicula"
+            android:layout_width="143dp"
+            android:layout_height="76dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:backgroundTint="#8E8A8A"
+            android:padding="0dp"
+            android:text="idPelícula(IMdb)"
+            android:textAlignment="center"
+            android:textColor="#8E8A8A"
+            android:textColorHint="#423E3E"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_buscar_pelicula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:layout_toRightOf="@id/idPelicula"
+            android:backgroundTint="#4CAF50"
+            android:text="Buscar" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
